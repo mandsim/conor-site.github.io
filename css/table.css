@@ -1,0 +1,41 @@
+.main-div.table-div {
+    overflow: auto;
+	position: relative;
+}
+
+.row, .elem {
+    border: 0.2rem solid white;
+}
+
+.table {
+    display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+}
+
+.elem {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.main-h1 {
+    margin-bottom: 0.2rem;
+}
+
+.red {
+    background-color: rgb(255, 70, 70);
+}
+
+.green {
+    background-color: rgb(55, 139, 55);
+}
+
+.elem.first {
+    font-weight: 700;
+}
+

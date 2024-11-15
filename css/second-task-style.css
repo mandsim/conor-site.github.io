@@ -1,0 +1,297 @@
+html {
+    height: 100%;
+}
+
+.image-div {
+    margin-top: 2rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: rgb(26, 24, 24);
+    position: relative;
+}
+
+svg {
+    width: 5rem;
+    height: 6rem;
+}
+
+#svg1 {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+}
+
+#svg2 {
+    position: relative;
+    top: 13rem;
+    left: 8.5rem;
+}
+
+#letterV {
+    fill: rgb(8, 44, 128);
+}
+
+#letterM {
+    fill: rgb(93, 17, 143);
+}
+
+.image-div:hover #rectV, .image-div:hover #circleM {
+    fill: greenyellow;
+}
+
+.image-div:focus-within #svg1 {
+    animation: moveV 8s forwards;
+}
+
+.image-div:focus-within #svg2 {
+    animation: moveM 8s forwards;
+}
+
+.image-div:focus-within #letterV {
+    animation: colorV 8s forwards, changeOpacity 5s forwards;
+    animation-delay: 0s, 8s;
+}
+
+.image-div:focus-within #letterM {
+    animation: colorM 8s forwards, changeOpacity 5s forwards;
+    animation-delay: 0s, 8s;
+}
+
+.image-div:focus-within #rectV {
+    animation: changeOpacity 5s forwards;
+    animation-delay: 8s;
+}
+
+.image-div:focus-within #circleM {
+    animation: changeOpacity 5s forwards;
+    animation-delay: 8s;
+}
+
+.image-div:focus-within #image-appear {
+    animation: showImage 3s forwards;
+    animation-delay: 14s;
+}
+
+.image-div:focus-within #text-appear {
+    animation: showText 3s forwards;
+    animation-delay: 10s;
+}
+
+.image-div:focus-within {
+    animation: shake 0.5s infinite forwards;
+    animation-delay: 17s;
+}
+
+.image-div #image-appear {
+    animation: unfocus-photo 2s forwards;
+}
+
+.image-div #text-appear {
+    animation: unfocus-text 2s forwards;
+}
+
+.image-div #svg1{
+    animation: unfocus-letterV 6s forwards;
+}
+
+.image-div #svg2{
+    animation: unfocus-letterM 6s forwards;
+}
+
+.image-div #letterV {
+    animation: uncolorV 6s forwards;
+}
+
+.image-div #letterM {
+    animation: uncolorM 6s forwards;
+}
+
+
+@keyframes spin {
+    100% {
+      transform: rotate(360deg)
+    }
+}
+
+@keyframes moveV {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    33.3% {
+        transform: translate(0%, 100%);
+    }
+    66.6% {
+        transform: translate(100%, 0%);
+    }
+    100% {
+        transform: translate(100%, 100%);
+    }
+}
+
+@keyframes moveM {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    33.3% {
+        transform: translate(0%, -100%);
+    }
+    66.6% {
+        transform: translate(-100%, 0%);
+    }
+    100% {
+        transform: translate(-100%, -100%);
+    }
+}
+
+@keyframes colorV {
+    100% {
+        fill: rgb(93, 17, 143);
+    }
+}
+
+@keyframes colorM {
+    100% {
+        fill: rgb(8, 44, 128);
+    }
+}
+
+@keyframes changeOpacity{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showImage{
+    0% {
+        opacity: 0;
+        transform: scale(2) rotate(360deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(25, 187, 199, 0.7); 
+    }
+}
+
+@keyframes showText {
+    0% {
+        opacity: 0;
+        font-size: 0rem;
+    }
+    100% {
+        opacity: 1;
+        font-size: 2rem;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-0.1rem);
+    }
+    75% {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+@keyframes unfocus-photo {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes unfocus-text {
+    0% {
+        opacity: 1;
+        font-size: 2rem;
+    }
+    100% {
+        opacity: 0;
+        font-size: 0rem;
+    }
+}
+
+@keyframes unfocus-letterV {
+    0% {
+        opacity: 0;
+        transform: translate(100%, 100%);
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+        transform: translate(100%, 100%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes unfocus-letterM {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, -100%);
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+        transform: translate(-100%, -100%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes uncolorV {
+    66% {
+        fill: rgb(93, 17, 143);
+    }
+    100% {
+        fill: rgb(8, 44, 128);
+    }
+}
+
+@keyframes uncolorM {
+    66% {
+        fill: rgb(8, 44, 128);
+    }
+    100% {
+        fill: rgb(93, 17, 143);
+    }
+}
+
+#image-appear {
+    opacity: 0;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.5rem;
+    width: 15rem;
+    height: 15rem;
+    background-color: none;
+    z-index: 0;
+}
+
+#text-appear {
+    opacity: 0;
+    width: 20rem;
+    position: absolute;
+    top: 8rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(137 250 255);
+    z-index: 1;
+}

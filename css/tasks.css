@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+}
+
+.tasks-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.tasks-menu li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tasks-menu li:hover {
+    background-color: rgb(81, 80, 80);
+}
+
+.tasks-a {
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    font-size: 2rem;
+    text-decoration: none;
+}

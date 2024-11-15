@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+}
+
+.box {
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    width: 20em;
+    height: 20em;
+    background: linear-gradient(180deg, #3B7AAB 0%, #ADD5EE 100%);
+}
+
+.ground {
+    position: absolute;
+    width: 20em;
+    height: 4em;
+    top: 16em;
+    background: repeating-linear-gradient(
+        88deg, 
+        #FAF45E -0.4em, 
+        #FAF45E 1.1em, 
+        #DBAE48 1.1em, 
+        #DBAE48 2.4em
+    )
+}
+
+.turtle-shell {
+    position: absolute;
+    top: 7.5em;
+    left: 2em;
+    width: 10em;
+    height: 7em;
+    border-top-left-radius: 6em 7em;
+    border-top-right-radius: 6em 7em;
+    border: 0.2em solid #265025;
+    border-bottom: 0em;
+    background: linear-gradient(110deg, #2E6039 10%, #62D373 100%)
+}
+
+.turtle-belly {
+    position: absolute;
+    left: 2em;
+    width: 10.6em;
+    height: 0.5em;
+    top: 14.2em;
+    background: #265025;
+}
+
+.vertical-lines {
+    top: 6.89em;
+    left: 5.45em;
+    width: 3em;
+    height: 7.6em;
+    border: 0.3em solid black;
+    border-color: transparent #265025 transparent #265025;
+    border-radius: 50% 50% 20% 20%;
+    position: absolute;
+}
+
+.leg {
+    position:absolute;
+    width:1.1em; 
+    height:1.3em;
+    top: 14.7em;
+    left:4.1em;
+    overflow:hidden;
+  }
+  
+  .leg::after {
+    content:'';
+    position:absolute;
+    left:-4.85em; 
+    top:-4em;
+    border-radius:100%;
+    width:0.8em;
+    height:1.4em;
+    border:5em solid #377433;
+  }
+
+ .leg.second {
+    left: 5.4em;
+ }
+
+ .leg.third {
+    left: 8.6em;
+ }
+
+ .leg.fourth {
+    left: 9.9em;
+ }
+
+.turtle-head {
+    position: absolute;
+    top: 10.2em;
+    left: 11.5em;
+    width: 3.5em;
+    height: 4.8em;
+    border-radius: 1.5em / 2em;
+    rotate: 70deg;
+    background: linear-gradient(140deg, #2E6039 20%, #62D373 100%)
+}
+
+.turtle-eye {
+    position: absolute;
+    top: 1em;
+    right: 1.8em;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    background: black;
+}
+
+.turtle-mouth {
+    left: 1.27em;
+    top: 0.3em;
+    width: 1.4em;
+    height: 1.5em;
+    border: 0.3em solid black;
+    border-color: transparent transparent black transparent;
+    border-radius: 50%;
+    position: absolute;
+    rotate: 291deg;
+}
+
+.turtle-tail {
+    position: absolute;
+    top: 13.7em;
+    left: 1.1em;
+    rotate: 270deg;
+    width: 0;
+	height: 0;
+	border-left: 0.5em solid transparent;
+	border-right: 0.5em solid transparent;
+	border-bottom: 1em solid #265025;
+}
+
+.horizontal-line {
+    top: 3.85em;
+    left: 4.95em;
+    width: 3.85em;
+    height: 10em;
+    border: 0.3em solid black;
+    border-color: transparent #265025 transparent transparent;
+    border-radius: 50%;
+    position: absolute;
+    rotate: 90deg;
+}
+
+.apple {
+    position: absolute;
+    top: 12em;
+    left: 16.9em;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background: radial-gradient(at 1.5em 1.3em, #AD4140 10%, #F2E3AF 60%);
+}
+
+.apple-stem {
+    position: absolute;
+    top: 10.55em;
+    left: 18.6em;
+    rotate: 165deg;
+    width: 0;
+	height: 0;
+	border-left: 0.4em solid transparent;
+	border-right: 0.4em solid transparent;
+	border-bottom: 2.3em solid #75E377;
+}
