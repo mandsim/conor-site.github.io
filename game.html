@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра</title>
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+    <div id="menu" class="menu">
+        <p id="player" class="menu-p">Игрок:</p>
+        <p id="score-menu" class="menu-p">Счет: 0</p>
+        <h1 id="choose-level">Выберите уровень</h1>
+        <div class="menu-options">
+            <button onclick="startLevel(1)">Уровень 1: Равные площади</button>
+            <button onclick="startLevel(4)">Уровень 2: Количество n-угольников</button>
+            <button onclick="startLevel(7)">Уровень 3: Количество многоугольников</button>
+            <button onclick="goToPlayersPage()">Посмотреть рейтинг</button>
+            <button id="backToMain">Главная</button>
+        </div>
+    </div>
+
+    <div id="game" class="hidden">
+        <p id="level">Уровень</p>
+        <p id="player-level">Игрок:</p>
+        <p id="goal">Цель:</p>
+        <div id="hud">
+            <span id="timer">Время: 00:00</span>
+            <span id="score">Очки: 0</span>
+            <span id="record">Рекорд: 0</span>
+        </div>
+        <button id="restartBtn" onclick="restartLevel()">Заново</button>
+        <button id="returnToMenu" onclick="backToMenu()">Вернуться в меню</button>
+        <canvas id="gameCanvas" width="300" height="300"></canvas>
+    </div>
+
+    <div id="stageMenu" class="hidden">
+        <div class="menu-content">
+            <h2 id="stageCompleteText">Стадия завершена!</h2>
+            <button id="nextStageBtn" onclick="nextStage()">Далее</button>
+        </div>
+    </div>
+
+    <div id="winMenu" class="hidden">
+        <div class="popup-content">
+            <h2>Поздравляем!</h2>
+            <p>Вы успешно завершили все этапы!</p>
+            <button id="returnToMenu" onclick="backToMenu()">Вернуться в меню</button>
+        </div>
+    </div>
+
+    <div id="endTimeMenu" class="hidden">
+        <div class="popup-content">
+            <h2>Время вышло!</h2>
+            <button id="restartBtn" onclick="restartLevelTimeOver()">Заново</button>
+            <button id="returnToMenu" onclick="backToMenu()">Вернуться в меню</button>
+        </div>
+    </div>
+    
+    <script src="script/game-script.js"></script>
+</body>
+</html>

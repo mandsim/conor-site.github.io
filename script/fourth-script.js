@@ -8,7 +8,7 @@ let splitButton = document.getElementById("button");
 splitButton.disabled = true;
 
 inputField.addEventListener("input", () => {
-    if (inputField.value.trim() !== "") {
+    if (inputField.value.trim() != "") {
         splitButton.disabled = false;
     } else {
         splitButton.disabled = true;
@@ -17,7 +17,7 @@ inputField.addEventListener("input", () => {
 
 function parseAndDisplay() {
     let input = document.getElementById("inputString").value;
-    let items = input.split(" - ").map(item => item.trim());
+    let items = input.split("-").map(item => item.trim());
     let wordsLower = [];
     let wordsUpper = [];
     let numbers = [];
@@ -29,7 +29,9 @@ function parseAndDisplay() {
         } else {
             wordsLower.push(item);
         }
+        
     });
+    console.log(items);
     wordsLower.sort();
     wordsUpper.sort();
     numbers.sort((a, b) => a - b);
@@ -161,7 +163,6 @@ document.getElementById("block2").addEventListener("dragover", (event) => {
 
 document.getElementById("block2").addEventListener("drop", (event) => {
     if (event.target === block2) {
-        // Отменяем перетаскивание, если кликнули по пустому пространству
         event.preventDefault();
     }
     let key = event.dataTransfer.getData("key");
